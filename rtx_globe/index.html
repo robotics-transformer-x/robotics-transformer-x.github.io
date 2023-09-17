@@ -1,0 +1,104 @@
+<head>
+  <style> body { margin: 0; } </style>
+
+  <script src="https://unpkg.com/three"></script>
+  <script src="https://unpkg.com/three-globe"></script>
+<!--  <script src="../../dist/three-globe.js"></script>-->
+</head>
+
+<body>
+  <div id="globeViz"></div>
+
+  <script type="importmap">{ "imports": { "three": "https://unpkg.com/three/build/three.module.js" }}</script>
+  <script type="module">
+    import { TrackballControls } from 'https://unpkg.com/three/examples/jsm/controls/TrackballControls.js';
+    Object.assign(THREE , { TrackballControls });
+
+    const Globe = new ThreeGlobe()
+      .globeImageUrl('https://unpkg.com/three-globe/example/img/earth-blue-marble.jpg')
+      .bumpImageUrl('https://unpkg.com/three-globe/example/img/earth-topology.png');
+
+    // custom globe material
+    const globeMaterial = Globe.globeMaterial();
+    globeMaterial.bumpScale = 10;
+    new THREE.TextureLoader().load('https://unpkg.com/three-globe/example/img/earth-water.png', texture => {
+      globeMaterial.specularMap = texture;
+      globeMaterial.specular = new THREE.Color('grey');
+      globeMaterial.shininess = 15;
+    });
+
+    const directionalLight = new THREE.DirectionalLight(0xffffff, 0.6 * Math.PI);
+    directionalLight.position.set(1, 1, 1); // change light position to see the specularMap's effect
+
+    // Setup renderer
+    const renderer = new THREE.WebGLRenderer();
+    renderer.setSize(window.innerWidth, window.innerHeight);
+    document.getElementById('globeViz').appendChild(renderer.domElement);
+
+    // Setup scene
+    const scene = new THREE.Scene();
+    scene.add(Globe);
+    scene.add(new THREE.AmbientLight(0xcccccc, Math.PI));
+    scene.add(directionalLight);
+
+    // Setup camera
+    const camera = new THREE.PerspectiveCamera();
+    camera.aspect = window.innerWidth/window.innerHeight;
+    camera.updateProjectionMatrix();
+    camera.position.z = 500;
+
+    // Add camera controls
+    const tbControls = new THREE.TrackballControls(camera, renderer.domElement);
+    tbControls.minDistance = 101;
+    tbControls.rotateSpeed = 5;
+    tbControls.zoomSpeed = 0.8;
+
+
+    // Create a texture loader so we can load our image file
+    var loader = new THREE.TextureLoader();
+
+    
+    // create the mesh 500 times and randomly position around the globe 
+    for (var i = 0; i < 500; i++) {
+      console.log((Math.floor(Math.random() * 15) + 1) + '.png');
+      var material = new THREE.MeshLambertMaterial({
+        //randomly choose between 1.png to 15.png
+        //follow    map: loader.load('https://s3.amazonaws.com/duhaime/blog/tsne-webgl/assets/cat.jpg')
+        map: loader.load((Math.floor(Math.random() * 15) + 1) + '.png')
+      });
+      var geometry = new THREE.PlaneGeometry(10, 10*.75);
+      var mesh = new THREE.Mesh(geometry, material);
+      var lang = Math.random() * Math.PI * 2 - Math.PI;
+      var lat = Math.random() * Math.PI - Math.PI / 2;
+      var radius = 150 + Math.random() * 10;
+      mesh.position.set(
+        radius * Math.cos(lang) * Math.cos(lat),
+        radius * Math.sin(lang) * Math.cos(lat),
+        radius * Math.sin(lat)
+      );
+      // always facing outside
+      mesh.lookAt(new THREE.Vector3(0, 0, 0));
+      // look at the opposite direction
+      mesh.rotation.y += Math.PI;
+
+      scene.add(mesh);
+    }
+    // var mesh = new THREE.Mesh(geometry, material);
+
+    // set the position of the image mesh in the x,y,z dimensions
+    // mesh.position.set(200,0,0)
+
+    // add the image to the scene
+    // scene.add(mesh);
+
+    // Kick-off renderer
+    (function animate() { // IIFE
+      // Frame cycle
+
+      tbControls.update();
+      renderer.render(scene, camera);
+      scene.rotation.y += 0.002;
+      requestAnimationFrame(animate);
+    })();
+  </script>
+</body>
