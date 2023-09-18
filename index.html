@@ -41,7 +41,7 @@
 
     <link rel="stylesheet" href="css/bootstrap.min.css">
 
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.8.0/codemirror.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/1.5.3/clipboard.min.js"></script>
@@ -56,18 +56,43 @@
 
   gtag('config', 'G-52J0PM8XKV');
 </script>
+
 	
     <style>
         .nav-pills {
           position: relative;
           display: inline;
         }
-        .imtip {
-          position: absolute;
-          top: 0;
-          left: 0;
-        }
-    </style>
+.author {
+  position: relative;
+  display: inline-block;
+  border-bottom: 1px dotted black; /* If you want dots under the hoverable text */
+}
+
+/* Tooltip text */
+.author .affiliation {
+  visibility: hidden;
+  width: 120px;
+  background-color: black;
+  color: #fff;
+  text-align: center;
+  padding: 5px 0;
+  border-radius: 6px;
+ 
+  /* Position the tooltip text - see examples below! */
+  position: absolute;
+  z-index: 1;
+  width: 120px;
+  top: 100%;
+  left: 50%;
+  margin-left: -60px; /* Use half of the width (120/2 = 60), to center the tooltip */
+}
+
+/* Show the tooltip text when you mouse over the tooltip container */
+.author:hover .affiliation {
+  visibility: visible;
+}
+</style>
 </head>
 
 <body>
@@ -78,12 +103,214 @@
             </h2>
         </div>
         <div class="row">
+            
             <div class="col-md-12 text-center">
                 <ul class="list-inline">
+                    <br>
+<li class="author" data-affiliation="German Aerospace Center">Abhishek Padalkar<span class="affiliation">test</span></li> 
+<li class="author" data-affiliation="Google DeepMind">Acorn Pooley</li> 
+<li class="author" data-affiliation="Intrinsic LLC">Ajinkya Jain</li> 
+<li class="author" data-affiliation="Google DeepMind">Alex Bewley</li> 
+<li class="author" data-affiliation="Google DeepMind">Alex Herzog</li> 
+<li class="author" data-affiliation="Google DeepMind">Alex Irpan</li> 
+<li class="author" data-affiliation="Stanford University">Alexander Khazatsky</li>
+<br>
+<li class="author" data-affiliation="New York University">Anant Rai</li> 
+<li class="author" data-affiliation="Google DeepMind, University of California, Berkeley">Anikait Singh</li> 
+<li class="author" data-affiliation="Google DeepMind">Anthony Brohan</li> 
+<li class="author" data-affiliation="German Aerospace Center">Antonin Raffin</li> 
+<li class="author" data-affiliation="Google DeepMind">Ayzaan Wahid</li> 
+<li class="author" data-affiliation="Queensland University of Technology">Ben Burgess-Limerick</li> 
+<li class="author" data-affiliation="Korea Advanced Institute of Science & Technology">Beomjoon Kim</li>
+<br>
+<li class="author" data-affiliation="Max Planck Institutes">Bernhard Schölkopf</li> 
+<li class="author" data-affiliation="Google DeepMind">Brian Ichter</li> 
+<li class="author" data-affiliation="Shanghai Jiao Tong University, Flexiv Robotics">Cewu Lu</li> 
+<li class="author" data-affiliation="University of California, Berkeley">Charles Xu</li> 
+<li class="author" data-affiliation="Google DeepMind, Stanford University">Chelsea Finn</li> 
+<li class="author" data-affiliation="University of California, Berkeley">Chenfeng Xu</li> 
+<li class="author" data-affiliation="Columbia University">Cheng Chi</li>
+
+<br><li class="author" data-affiliation="University of Freiburg">Chenguang Huang</li>
+<li class="author" data-affiliation="Google DeepMind">Christine Chan</li>
+<li class="author" data-affiliation="Columbia University">Chuer Pan</li>
+<li class="author" data-affiliation="Google DeepMind">Chuyuan Fu</li>
+<li class="author" data-affiliation="Google DeepMind">Coline Devin</li>
+<li class="author" data-affiliation="Carnegie Mellon University">Deepak Pathak</li>
+<li class="author" data-affiliation="University of California, Berkeley">Dhruv Shah</li>
+
+<br><li class="author" data-affiliation="Max Planck Institutes">Dieter Büchler</li>
+<li class="author" data-affiliation="Google DeepMind">Dmitry Kalashnikov</li>
+<li class="author" data-affiliation="Google DeepMind">Dorsa Sadigh</li>
+<li class="author" data-affiliation="Imperial College London">Edward Johns</li>
+<li class="author" data-affiliation="Istituto Italiano di Tecnologia">Federico Ceola</li>
+<li class="author" data-affiliation="Google DeepMind">Fei Xia</li>
+<li class="author" data-affiliation="German Aerospace Center">Freek Stulp</li>
+
+<br><li class="author" data-affiliation="Carnegie Mellon University">Gaoyue Zhou</li>
+<li class="author" data-affiliation="University of Southern California">Gaurav S. Sukhatme</li>
+<li class="author" data-affiliation="University of Southern California">Gautam Salhotra</li> 
+<li class="author" data-affiliation="University of California, San Diego">Ge Yan</li>
+<li class="author" data-affiliation="ETH Zurich">Giulio Schiavi</li>
+<li class="author" data-affiliation="University of California, San Diego">Hao Su</li>
+<li class="author" data-affiliation="Shanghai Jiao Tong University">Hao-Shu Fang</li>
+
+<br><li class="author" data-affiliation="Stanford University">Haochen Shi</li>
+<li class="author" data-affiliation="Arizona State University">Heni Ben Amor</li>
+<li class="author" data-affiliation="University of California, San Diego">Henrik I Christensen</li>
+<li class="author" data-affiliation="The University of Tokyo">Hiroki Furuta</li>
+<li class="author" data-affiliation="University of California, Berkeley">Homer Walke</li>
+<li class="author" data-affiliation="Shanghai Jiao Tong University">Hongjie Fang</li>
+<li class="author" data-affiliation="Google DeepMind">Igor Mordatch</li>
+
+<br><li class="author" data-affiliation="University of California, Berkeley">Ilija Radosavovic</li>
+<li class="author" data-affiliation="Google DeepMind">Isabel Leal</li>
+<li class="author" data-affiliation="Google DeepMind">Jacky Liang</li>
+<li class="author" data-affiliation="Korea Advanced Institute of Science & Technology">Jaehyung Kim</li>
+<li class="author" data-affiliation="Max Planck Institutes">Jan Schneider</li>
+<li class="author" data-affiliation="Google DeepMind">Jasmine Hsu</li>
+<li class="author" data-affiliation="Stanford University">Jeannette Bohg</li>
+
+<br><li class="author" data-affiliation="Google DeepMind">Jeffrey Bingham</li>
+<li class="author" data-affiliation="Stanford University">Jiajun Wu</li>
+<li class="author" data-affiliation="Google Research">Jialin Wu</li>
+<li class="author" data-affiliation="University of California, Berkeley">Jianlan Luo</li>
+<li class="author" data-affiliation="University of California, San Diego">Jiayuan Gu</li>
+<li class="author" data-affiliation="Google DeepMind">Jie Tan</li>
+<li class="author" data-affiliation="The University of Tokyo">Jihoon Oh</li>
+
+
+
+<br><li class="author" data-affiliation="University of California, Berkeley">Jitendra Malik</li> 
+<li class="author" data-affiliation="Google DeepMind">Jonathan Tompson</li> 
+<li class="author" data-affiliation="Stanford University">Jonathan Yang</li> 
+<li class="author" data-affiliation="Korea Advanced Institute of Science & Technology">Joseph J. Lim</li> 
+<li class="author" data-affiliation="German Aerospace Center">João Silvério</li> 
+<li class="author" data-affiliation="Korea Advanced Institute of Science & Technology">Junhyek Han</li> 
+<li class="author" data-affiliation="Google DeepMind">Kanishka Rao</li>
+<br><li class="author" data-affiliation="University of California, Berkeley">Karl Pertsch</li> 
+<li class="author" data-affiliation="Google DeepMind">Karol Hausman</li> 
+<li class="author" data-affiliation="Intrinsic LLC">Keegan Go</li> 
+<li class="author" data-affiliation="Google DeepMind">Keerthana Gopalakrishnan</li> 
+<li class="author" data-affiliation="University of California, Berkeley">Ken Goldberg</li> 
+<li class="author" data-affiliation="Google DeepMind">Kendra Byrne</li> 
+<li class="author" data-affiliation="Google DeepMind">Kenneth Oslund</li>
+<br><li class="author" data-affiliation="The University of Tokyo">Kento Kawaharazuka</li> 
+<li class="author" data-affiliation="Carnegie Mellon University">Kevin Zhang</li> 
+<li class="author" data-affiliation="Arizona State University">Keyvan Majd</li> 
+<li class="author" data-affiliation="Queensland University of Technology">Krishan Rana</li> 
+<li class="author" data-affiliation="Stanford University">Krishnan Srinivasan</li> 
+<li class="author" data-affiliation="University of California, Berkeley">Lawrence Yunliang Chen</li> 
+<li class="author" data-affiliation="New York University">Lerrel Pinto</li>
+<br><li class="author" data-affiliation="University of California, Berkeley">Liam Tan</li> 
+<li class="author" data-affiliation="ETH Zurich">Lionel Ott</li> 
+<li class="author" data-affiliation="Google DeepMind">Lisa Lee</li> 
+<li class="author" data-affiliation="University of California, Berkeley">Masayoshi Tomizuka</li> 
+<li class="author" data-affiliation="Stanford University">Maximilian Du</li> 
+<li class="author" data-affiliation="Google DeepMind">Michael Ahn</li> 
+<li class="author" data-affiliation="University of Illinois Urbana-Champaign">Mingtong Zhang</li>
+<br><li class="author" data-affiliation="University of California, Berkeley">Mingyu Ding</li> 
+<li class="author" data-affiliation="Carnegie Mellon University">Mohan Kumar Srirama</li> 
+<li class="author" data-affiliation="Carnegie Mellon University">Mohit Sharma</li> 
+<li class="author" data-affiliation="Stanford University">Moo Jin Kim</li> 
+<li class="author" data-affiliation="The University of Tokyo">Naoaki Kanazawa</li> 
+<li class="author" data-affiliation="University of California, San Diego">Nicklas Hansen</li> 
+<li class="author" data-affiliation="Google DeepMind">Nicolas Heess</li>
+<br><li class="author" data-affiliation="Google DeepMind">Nikhil J Joshi</li> 
+<li class="author" data-affiliation="Queensland University of Technology">Niko Suenderhauf</li> 
+<li class="author" data-affiliation="Imperial College London">Norman Di Palo</li> 
+<li class="author" data-affiliation="New York University">Nur Muhammad Mahi Shafiullah</li> 
+<li class="author" data-affiliation="University of Freiburg">Oier Mees</li> 
+<li class="author" data-affiliation="Carnegie Mellon University">Oliver Kroemer</li> 
+<li class="author" data-affiliation="Google DeepMind">Pannag R Sanketi</li>
+
+
+<br><li class="author" data-affiliation="Google DeepMind">Paul Wohlhart</li>
+<li class="author" data-affiliation="Google DeepMind">Peng Xu</li>
+<li class="author" data-affiliation="Google DeepMind">Pierre Sermanet</li>
+<li class="author" data-affiliation="Stanford University">Priya Sundaresan</li>
+<li class="author" data-affiliation="Google DeepMind">Quan Vuong</li>
+<li class="author" data-affiliation="Google DeepMind, Stanford University">Rafael Rafailov</li>
+<li class="author" data-affiliation="University of California, Berkeley">Ran Tian</li>
+
+<br><li class="author" data-affiliation="University of California, Berkeley">Ria Doshi</li>
+<li class="author" data-affiliation="The University of Texas at Austin">Roberto Martín-Martín</li>
+<li class="author" data-affiliation="Carnegie Mellon University">Russell Mendonca</li>
+<li class="author" data-affiliation="The University of Texas at Austin">Rutav Shah</li>
+<li class="author" data-affiliation="University of California, Berkeley">Ryan Hoque</li>
+<li class="author" data-affiliation="Google DeepMind">Ryan Julian</li>
+<li class="author" data-affiliation="German Aerospace Center">Samuel Bustamante</li>
+
+<br><li class="author" data-affiliation="Google DeepMind">Sean Kirmani</li>
+<li class="author" data-affiliation="Google DeepMind, University of California, Berkeley">Sergey Levine</li>
+<li class="author" data-affiliation="Google DeepMind">Sherry Moore</li>
+<li class="author" data-affiliation="Carnegie Mellon University">Shikhar Bahl</li>
+<li class="author" data-affiliation="University of Southern California">Shivin Dass</li>
+<li class="author" data-affiliation="Columbia University">Shuran Song</li>
+<li class="author" data-affiliation="Google DeepMind">Sichun Xu</li>
+<br>
+<li class="author" data-affiliation="New York University">Siddhant Haldar</li>
+<li class="author" data-affiliation="University of California, Berkeley">Simeon Adebola</li>
+<li class="author" data-affiliation="Max Planck Institutes">Simon Guist</li>
+<li class="author" data-affiliation="The University of Texas at Austin">Soroush Nasiriany</li>
+<li class="author" data-affiliation="Intrinsic LLC">Stefan Schaal</li>
+<li class="author" data-affiliation="Google DeepMind">Stefan Welker</li>
+<br>
+<li class="author" data-affiliation="Stanford University">Stephen Tian</li>
+<li class="author" data-affiliation="Carnegie Mellon University">Sudeep Dasari</li>
+<li class="author" data-affiliation="Stanford University">Suneel Belkhale</li>
+<li class="author" data-affiliation="The University of Tokyo">Takayuki Osa</li>
+<li class="author" data-affiliation="The University of Tokyo">Tatsuya Harada</li>
+<li class="author" data-affiliation="The University of Tokyo">Tatsuya Matsushima</li>
+<li class="author" data-affiliation="Google DeepMind">Ted Xiao</li>
+<li class="author" data-affiliation="Google DeepMind">Tianhe Yu</li>
+<br>
+<li class="author" data-affiliation="Google DeepMind">Tianli Ding</li>
+<li class="author" data-affiliation="Google DeepMind">Todor Davchev</li>
+<li class="author" data-affiliation="Stanford University">Tony Z. Zhao</li>
+<li class="author" data-affiliation="Google DeepMind">Travis Armstrong</li>
+<li class="author" data-affiliation="University of California, Berkeley">Trevor Darrell</li>
+<li class="author" data-affiliation="Google DeepMind, Carnegie Mellon University">Vidhi Jain</li>
+<li class="author" data-affiliation="Google DeepMind">Vincent Vanhoucke</li>
+<br>
+<li class="author" data-affiliation="University of California, Berkeley">Wei Zhan</li>
+<li class="author" data-affiliation="Google DeepMind, Carnegie Mellon University">Wenxuan Zhou</li>
+<li class="author" data-affiliation="University of Technology, Nuremberg">Wolfram Burgard</li>
+<li class="author" data-affiliation="Google DeepMind">Xi Chen</li>
+<li class="author" data-affiliation="University of California, San Diego">Xiaolong Wang</li>
+<li class="author" data-affiliation="University of California, Berkeley">Xinghao Zhu</li>
+<li class="author" data-affiliation="University of California, San Diego">Xuanlin Li</li>
+<li class="author" data-affiliation="Google DeepMind">Yao Lu</li>
+<br>
+
+<li class="author" data-affiliation="Google DeepMind">Yevgen Chebotar</li>
+<li class="author" data-affiliation="Arizona State University">Yifan Zhou</li>
+<li class="author" data-affiliation="The University of Texas at Austin">Yifeng Zhu</li>
+<li class="author" data-affiliation="Google DeepMind">Ying Xu</li>
+<li class="author" data-affiliation="University of Illinois Urbana-Champaign">Yixuan Wang</li>
+<li class="author" data-affiliation="Korea Advanced Institute of Science & Technology">Yoonyoung Cho</li>
+<li class="author" data-affiliation="University of California, Berkeley">Youngwoon Lee</li>
+<li class="author" data-affiliation="Stanford University">Yuchen Cui</li>
+<br>
+<li class="author" data-affiliation="University of California, San Diego">Yueh-hua Wu</li>
+<li class="author" data-affiliation="Google DeepMind, The University of Tokyo">Yujin Tang</li>
+<li class="author" data-affiliation="The University of Texas at Austin">Yuke Zhu</li>
+<li class="author" data-affiliation="University of Illinois Urbana-Champaign">Yunzhu Li</li>
+<li class="author" data-affiliation="The University of Tokyo">Yusuke Iwasawa</li>
+<li class="author" data-affiliation="The University of Tokyo">Yutaka Matsuo</li>
+<li class="author" data-affiliation="Google DeepMind">Zhuo Xu</li>
+<li class="author" data-affiliation="New York University">Zichen Jeff Cui</li>
+
+<br>
+
+
+                </ul>
+                <div class="affiliation"></div>
                 <br>
-                    Open X-Embodiment Collaboration.
+                <!-- mail logo from font awesome -->
+                    Open X-Embodiment Collaboration <a href="mailto:open-x-embodiment@googlegroups.com"><i class="fa fa-envelope"></i></a>
                 <br>
-			<b><i> Authors listed in alphabetical order (see paper appendix for contribution statement). </i></b>
+			<b><i> Authors listed in alphabetical order. </i></b>
 		<br><br>
                     <!-- <a href="http://g.co/robotics">
                     <image src="img/rng-logo.png" height="37px"> </a>
@@ -97,43 +324,35 @@
         </div>
 
 
-        <!-- <div class="row">
+       <div class="row">
                 <div class="col-md-4 col-md-offset-4 text-center">
                     <ul class="nav nav-pills nav-justified">
-                        <li>
-                            <a href="assets/rt1.pdf">
-                            <image src="img/paper_small2.png" height="60px">
-                                <h4><strong>Paper</strong></h4>
-                            </a>
+
+                       
+                         <li>
+                            <a href="#">
+                            <image src="img/github.png" height="60px">
+                                <h4><strong>Code (coming soon)</strong></h4>
+                            </a>                   
                         </li>
 
                         <li>
-                            <a href="https://youtu.be/UuKAp9a6wMs">
-                            <image src="img/youtube_icon.png" height="60px">
-                                <h4><strong>Video</strong></h4>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="http://ai.googleblog.com/2022/12/rt-1-robotics-transformer-for-real.html">
-                            <image src="img/google-ai-blog-small.png" height="60px">
-                                <h4><strong>Blogpost</strong></h4>
-                            </a>
-                        </li>
-                         <li>
-                            <a href="https://github.com/google-research/robotics_transformer">
-                            <image src="img/github.png" height="60px">
-                                <h4><strong>Code</strong></h4>
+                            <a href="#">
+                                <image src="img/data.png" height="60px">
+                                <h4><strong>Data (coming soon)</strong></h4>
                             </a>                   
                         </li>
-                        <li>
-                            <a href="https://robotics-transformer2.github.io/">
-                            <image src="img/logo.png" height="60px">
-                                <h4><strong>RT-2</strong></h4>
-                            </a>
-                        </li> 
+                        
                     </ul>
                 </div>
-        </div> -->
+        </div> 
+
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2">
+               <iframe height="540" width="720" src="./rtx_globe/">
+               </iframe>
+            </div>
+        </div>
 
         <div class="row">
             <div class="col-md-8 col-md-offset-2">
@@ -148,10 +367,9 @@
         </div>
 
         <div class="row">
-           
             <div class="col-md-8 col-md-offset-2">
                 <h3>
-                    Overview
+                    Data Approach Overview
                 </h3>
                 <img src="img/overview.png" class="img-responsive"></img>
                 <p>We propose an open, large-scale dataset for robot learning curated from 21 institutions across the globe. The dataset represents diverse behaviors, robot embodiments and environments, and enables learning generalized robotic policies.</p>
@@ -160,10 +378,59 @@
 
         <div class="row">
             <div class="col-md-8 col-md-offset-2">
-               <iframe height="540" width="720" src="./rtx_globe/">
-               </iframe>
+                <h3>
+                    Algorithm Approach Overview
+                </h3>
+                <img src="img/algorithm.png" class="img-responsive"></img>
+                
+                <p>We train two models on the robotics data mixture: (1) RT-1, an efficient Transformer-based architecture designed for robotic control, and (2) RT-2, a large vision-language model co-fine-tuned to output robot actions as natural language tokens.
+                </p>
+
+                <p>
+                Both models output robot actions represented with respect to the robot gripper frame. The robot action is a 7-dimensional vector consisting of x, y, z, roll, pitch, yaw, and gripper opening or the rates of these quantities. For data sets where some of these dimensions are not exercised by the robot, during data collection, we set the value of the corresponding dimensions to zero.
+                </p>
+
+                <p>
+                We refer to the RT-1 model trained using the robotic data mixture as RT-1-X, and the RT-2 model trained using the robotic data mixture as RT-2-X. 
+                </p>
+
             </div>
         </div>
+
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2">
+                <h3>
+                    Results
+                </h3>
+
+                <h5>
+                    RT-1-X evaluation on in-distribution skills
+                </h5>
+                <img src="img/rt1x.png" class="img-responsive"></img>
+
+
+                <p>
+                    The RT-1-X models outperforms RT-1 or the Original Method trained on individual datasets by 50% in the small-data domain. Original Method refers to the model developed by the creators of the dataset trained only on that respective dataset. The Original Method constitutes a reasonable baseline insofar as it can be expected that the model has been optimized to work well with the associated data. The lab logos indicate the physical location of real robot evaluation, and the robot pictures indicate the embodiment used for the evaluation.
+                </p>
+                
+
+                <h5>
+                    RT-2-X evaluation on emergent skills
+                </h5>
+
+                <img src="img/rt2x.png" class="img-responsive" width="75%"></img>
+
+
+                <p>
+                    The RT-2-X model outperforms RT-2 by 3x in emergent skill evaluation and demonstrates skills that the RT-2 model was not capable of previously, including better spatial understanding in both the absolute and relative sense. Small changes in preposition in the task string can also modulate low-level robot behavior. The skills used for evaluation are illustrated in the figure above. The RT-2-X model outperforms RT-2 by 3x in emergent skill evaluation and demonstrates skills that the RT-2 model was not capable of previously.
+                </p>
+
+
+
+            </div>
+        </div>
+
+       
 
 
         <div class="row">
@@ -178,5 +445,22 @@
             </div>
         </div>
     </div>
+   
+    <script>
+        const authors = document.querySelectorAll('.author');
+
+authors.forEach(author => {
+  // Get the affiliation from the data-affiliation attribute
+  const affiliation = author.getAttribute('data-affiliation');
+  
+  // Create a new span element with the class "affiliation"
+  const span = document.createElement('span');
+  span.className = 'affiliation';
+  span.textContent = `${affiliation}`;
+  
+  // Append the span to the author element
+  author.appendChild(span);
+});
+    </script>
 </body>
 </html>
