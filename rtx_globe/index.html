@@ -69,15 +69,19 @@
       var geometry = new THREE.PlaneGeometry(10, 10*.75);
       var mesh = new THREE.Mesh(geometry, material);
 
-      var theta = 2 * Math.PI * Math.random();
-      var phi = Math.acos(1 - 2 * Math.random());
+      var theta = 0.6 * Math.random();
+      var theta = Math.max(0.4, Math.min(theta, 0.6));
+
+      var phi = Math.PI * Math.random() * 2;
 
       var radius = 150 + Math.random() * 10;
+
+      var z = radius * Math.cos(phi);
 
       mesh.position.set(
         radius * Math.sin(phi) * Math.cos(theta),
         radius * Math.sin(phi) * Math.sin(theta),
-        radius * Math.cos(phi)
+        z
       )
 
       // always facing outside
