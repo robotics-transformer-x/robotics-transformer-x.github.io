@@ -57,14 +57,14 @@
     // Create a texture loader so we can load our image file
     var loader = new THREE.TextureLoader();
 
-    
+    var num_image = 100
     // create the mesh 500 times and randomly position around the globe 
     for (var i = 0; i < 1500; i++) {
-      console.log((Math.floor(Math.random() * 15) + 1) + '.png');
+      console.log((Math.floor(Math.random() * num_image) + 1) + '.png');
       var material = new THREE.MeshLambertMaterial({
         //randomly choose between 1.png to 15.png
         //follow    map: loader.load('https://s3.amazonaws.com/duhaime/blog/tsne-webgl/assets/cat.jpg')
-        map: loader.load((Math.floor(Math.random() * 15) + 1) + '.png')
+        map: loader.load((Math.floor(Math.random() * num_image) + 1) + '.png')
       });
       var geometry = new THREE.PlaneGeometry(10, 10*.75);
       var mesh = new THREE.Mesh(geometry, material);
