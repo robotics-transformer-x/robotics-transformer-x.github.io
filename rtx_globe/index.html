@@ -44,6 +44,7 @@
     // Setup camera
     const camera = new THREE.PerspectiveCamera();
     camera.aspect = window.innerWidth/window.innerHeight;
+    camera.zoom = 2;
     camera.updateProjectionMatrix();
     camera.position.z = 500;
 
