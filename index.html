@@ -100,6 +100,29 @@
 .author:hover .affiliation {
   visibility: visible;
 }
+
+.video-container {
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        .video-wrapper {
+            flex: 1;
+            margin: 3px;
+            max-width: calc(33.33%px); /* 33.33% for 3 videos per row, subtracting margins */
+            height: auto;
+            text-align: center;
+        }
+
+        .video {
+            max-width: 100%;
+            height: auto;
+        }
+
+        .caption {
+            margin-top: 5px;
+        }
+
 </style>
 </head>
 
@@ -416,7 +439,52 @@
                 <p>
                     The RT-1-X models outperforms RT-1 or the Original Method trained on individual datasets by 50% in the small-data domain. Original Method refers to the model developed by the creators of the dataset trained only on that respective dataset. The Original Method constitutes a reasonable baseline insofar as it can be expected that the model has been optimized to work well with the associated data. The lab logos indicate the physical location of real robot evaluation, and the robot pictures indicate the embodiment used for the evaluation.
                 </p>
-                
+
+                <div class="video-container">
+                    <div class="video-wrapper">
+                        <video class="video" controls autoplay loop>
+                            <source src="video/cable_routing_rt1x_out.mp4" type="video/mp4">
+                        </video>
+                        <p class="caption">At UC Berkeley</p>
+                    </div>
+                    <div class="video-wrapper">
+                        <video class="video" controls autoplay loop>
+                            <source src="video/task_agnostic_open_drawer_rt1x_out.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                        <p class="caption">At University of Freiburg</p>
+                    </div>
+                    <div class="video-wrapper">
+                        <video class="video" controls autoplay loop>
+                            <source src="video/nyuenv1.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                        <p class="caption">At NYU</p>
+                    </div>
+                </div>
+
+                <div class="video-container">
+                    <div class="video-wrapper">
+                        <video class="video" controls autoplay loop>
+                            <source src="video/cloth_sweeping_cropped.mp4" type="video/mp4">
+                        </video>
+                        <p class="caption">At UC Berkeley</p>
+                    </div>
+                    <div class="video-wrapper">
+                        <video class="video" controls autoplay loop>
+                            <source src="video/bridge_cropped.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                        <p class="caption">At Stanford</p>
+                    </div>
+                    <div class="video-wrapper">
+                        <video class="video" controls autoplay loop>
+                            <source src="video/jaco_play.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                        <p class="caption">At NYU</p>
+                    </div>
+                </div>
 
                 <h4>
                     RT-2-X evaluation on emergent skills
