@@ -15,7 +15,6 @@ div {
     color: #0000;
     -webkit-background-clip: text;
     background-clip: text;
-    font-weight: bold;
     display: inline-block;
 }
 
