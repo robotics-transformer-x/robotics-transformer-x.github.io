@@ -129,6 +129,34 @@
         .caption {
             margin-top: 0px;
         }
+
+        .image-container {
+            display: flex;
+            flex-direction: row;
+            /* Arrange items horizontally */
+            justify-content: space-between;
+            /* Spread items horizontally */
+            align-items: flex-end;
+            /* Align items at the bottom */
+        }
+
+        .image-container .image-wrapper {
+            flex: 1;
+            /* Distribute equal width to both images */
+            padding: 10px;
+            /* Add some spacing between images */
+        }
+
+        .image-container img {
+            max-width: 100%;
+            /* Constrain image width */
+            height: auto;
+            /* Maintain image aspect ratio */
+            display: block;
+            /* Remove extra space below inline images */
+            margin: 0 auto;
+            /* Center the images within their containers */
+        }
     </style>
 </head>
 
@@ -559,16 +587,18 @@
                     </div>
                 </div>
 
-                <div style="text-align: center; margin-bottom: 20px;" class="rt-2-x"> <b> <span class="css-rainbow-text">RT-1-X</span>
+                <div style="text-align: center; margin-bottom: 20px;" class="rt-2-x"> <b> <span
+                            class="css-rainbow-text">RT-1-X</span>
                         performing diverse tasks in
                         <span style="background-color: rgb(131, 253, 131)">6 academic labs</span></b>
                 </div>
 
                 <img src="img/rt1x.png" class="img-responsive"> </img>
 
-                <div style="text-align: center; margin-bottom: 20px;" class="rt-2-x"> <b> <span class="css-rainbow-text">RT-1-X models</span>
-                    outperform RT-1 or the Original Method trained on individual datasets by
-                    <span style="background-color: rgb(253, 131, 131)"> 50% in the small-data domain</span></b>
+                <div style="text-align: center; margin-bottom: 20px;" class="rt-2-x"> <b> <span
+                            class="css-rainbow-text">RT-1-X models</span>
+                        outperform RT-1 or Original Methods trained on individual datasets by
+                        <span style="background-color: rgb(253, 131, 131)"> 50% in the small-data domain</span></b>
                 </div>
 
                 <p>
@@ -606,20 +636,37 @@
                     </div>
                 </div>
 
-                <div style="text-align: center; margin-top: 0px; margin-bottom: 24px; font-size: 17px;" class="rt-2-x"> <b> <span class="css-rainbow-text">RT-2-X</span>
-                    modulates low-level behaviors based on 
-                    <span style="background-color: rgb(169, 156, 226)"> small change in prepositions</span> (see “on” vs “near” above) and demonstrates understanding of
-                    <span style="background-color: rgb(131, 253, 147)"> spatial relationships between objects</span></b>
+                <div style="text-align: center; margin-top: 0px; margin-bottom: 24px; font-size: 17px;" class="rt-2-x">
+                    <b> <span class="css-rainbow-text">RT-2-X</span>
+                        modulates low-level behaviors based on
+                        <span style="background-color: rgb(169, 156, 226)"> small change in prepositions</span> (see
+                        “on” vs “near” above) and demonstrates understanding of
+                        <span style="background-color: rgb(131, 253, 147)"> spatial relationships between
+                            objects</span></b>
                 </div>
 
+                <div class="image-container">
+                    <div class="image-wrapper">
+                        <img src="img/rt2x.png" class="img-responsive" alt="Image 1">
+                    </div>
+                    <div class="image-wrapper" style="">
+                        <img src="img/chart.png" class="img-responsive" alt="Image 2">
+                    </div>
+                </div>
+
+                <div style="text-align: center; margin-top: 0px; margin-bottom: 24px; font-size: 17px;" class="rt-2-x">
+                    <b> <span class="css-rainbow-text">RT-2-X</span>
+                        outperforms RT-2 by <span style="background-color: rgb(253, 131, 131)">3x</span> in
+                        emergent skill evaluation </b>
+                </div>
+
+
                 <p>
-                    The RT-2-X model outperforms RT-2 by 3x in emergent skill evaluation and demonstrates skills that
+                    RT-2-X demonstrates skills that
                     the RT-2 model was not capable of previously, including better spatial understanding in both the
                     absolute and relative sense. Small changes in preposition in the task string can also modulate
-                    low-level robot behavior. The skills used for evaluation are illustrated in the figure below.
+                    low-level robot behavior. The skills used for evaluation are illustrated in the figure above.
                 </p>
-
-                <img src="img/rt2x.png" class="img-responsive" width="75%"></img>
 
             </div>
 
