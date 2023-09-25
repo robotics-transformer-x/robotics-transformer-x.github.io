@@ -67,7 +67,7 @@
         //randomly choose between 1.png to 15.png
         // map: loader.load('https://s3.amazonaws.com/duhaime/blog/tsne-webgl/assets/cat.jpg'),
         side: THREE.DoubleSide,
-        map: loader.load((Math.floor(Math.random() * num_image) + 1) + '.png'),
+        map: loader.load('imgs/' + (Math.floor(Math.random() * num_image) + 1) + '.png'),
       });
       var geometry = new THREE.PlaneGeometry(10, 10*.75);
       var mesh = new THREE.Mesh(geometry, material);
