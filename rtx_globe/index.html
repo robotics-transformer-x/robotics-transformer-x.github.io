@@ -31,7 +31,7 @@
     directionalLight.position.set(1, 1, 1); // change light position to see the specularMap's effect
 
     // Setup renderer
-    const renderer = new THREE.WebGLRenderer();
+    const renderer = new THREE.WebGLRenderer({logarithmicDepthBuffer: true});
     renderer.setSize(window.innerWidth, window.innerHeight);
     document.getElementById('globeViz').appendChild(renderer.domElement);
 
