@@ -55,41 +55,42 @@
     tbControls.zoomSpeed = 0.8;
     tbControls.maxDistance = 1000.0;
     tbControls.minDistance = 500.0;
+    console.log(camera);
 
     // Create a texture loader so we can load our image file
     var loader = new THREE.TextureLoader();
 
     var num_image = 100
-    // create the mesh 500 times and randomly position around the globe 
-    for (var i = 0; i < 1500; i++) {
-      console.log((Math.floor(Math.random() * num_image) + 1) + '.png');
+    // create the mesh 1000 times and randomly position around the globe 
+    for (var i = 0; i < 1000; i++) {
       var material = new THREE.MeshLambertMaterial({
         //randomly choose between 1.png to 15.png
-        //follow    map: loader.load('https://s3.amazonaws.com/duhaime/blog/tsne-webgl/assets/cat.jpg')
-        map: loader.load((Math.floor(Math.random() * num_image) + 1) + '.png')
+        // map: loader.load('https://s3.amazonaws.com/duhaime/blog/tsne-webgl/assets/cat.jpg'),
+        side: THREE.DoubleSide,
+        map: loader.load((Math.floor(Math.random() * num_image) + 1) + '.png'),
       });
       var geometry = new THREE.PlaneGeometry(10, 10*.75);
       var mesh = new THREE.Mesh(geometry, material);
 
-      var theta = 0.6 * Math.random();
-      var theta = Math.max(0.4, Math.min(theta, 0.6));
+      var theta = 0.2 * Math.random();
+      var theta = Math.max(-0.3, Math.min(theta, 0.3));
 
       var phi = Math.PI * Math.random() * 2;
 
-      var radius = 150 + Math.random() * 10;
-
-      var z = radius * Math.cos(phi);
+      var radius = 150 + Math.random() * 30;
 
       mesh.position.set(
         radius * Math.sin(phi) * Math.cos(theta),
         radius * Math.sin(phi) * Math.sin(theta),
-        z
+        radius * Math.cos(phi),
       )
 
+      //mesh.up = new THREE.Vector3(0, 0, 1);
       // always facing outside
-      mesh.lookAt(new THREE.Vector3(0, 0, 0));
+      //mesh.lookAt(new THREE.Vector3(0, 0, 0));
       // look at the opposite direction
-      mesh.rotation.y += Math.PI;
+      mesh.rotation.x = theta;
+      mesh.rotation.y = phi;
 
       scene.add(mesh);
     }
@@ -107,7 +108,11 @@
 
       tbControls.update();
       renderer.render(scene, camera);
+
       scene.rotation.y += 0.002;
+      scene.rotation.x = 0.15;
+      scene.rotation.z = 0.15;
+
       requestAnimationFrame(animate);
     })();
   </script>
