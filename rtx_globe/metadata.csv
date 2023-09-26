@@ -25,8 +25,8 @@ BC-Z,Google Robot,Google,Teleoped Google robot doing mostly pick-place from a ta
 USC Cloth Sim,Franka,USC,Franka cloth interaction tasks
 Tokyo PR2 Fridge Opening,PR2,UTokyo,PR2 opening fridge doors
 Tokyo PR2 Tabletop Manipulation,PR2,UTokyo,"PR2 tabletop manipulation (folding cloth, picking)"
-Saytap,Unitree A1,UTokyo,"A1 walking, no RGB"
-Saytap,Unitree A1,UTokyo,"A1 walking, no RGB"
+Austin Sirius,Franka,UT Austin,Franka tabletop manipulation tasks
+Austin Sailor,Franka,UT Austin,Franka tablesetting tasks
 UTokyo xArm PickPlace,xArm,UTokyo,xArm picking and placing objects
 UTokyo xArm PickPlace,xArm,UTokyo,xArm picking and placing objects
 UTokyo xArm PickPlace,xArm,UTokyo,xArm picking and placing objects
@@ -47,7 +47,7 @@ Stanford Robocook,Franka,Stanford,Franka preparing dumplings with various tools
 Stanford Robocook,Franka,Stanford,Franka preparing dumplings with various tools
 Stanford Robocook,Franka,Stanford,Franka preparing dumplings with various tools
 Stanford Robocook,Franka,Stanford,Franka preparing dumplings with various tools
-ETH Agent Affordances,Franka,ETH,Franka opening ovens -- point cloud + proprio only
+UCSD Pick Place,xArm,UCSD,xArm picking and placing objects with distractors
 Imperial Wrist Cam,Sawyer,Imperial College,Sawyer performing table top manipulation
 Imperial Wrist Cam,Sawyer,Imperial College,Sawyer performing table top manipulation
 CMU Franka Pick-Insert Data,Franka,CMU,Franka picking objects and insertion tasks
@@ -97,6 +97,3 @@ Furniture Bench,Franka,KAIST,Franka assembling furniture
 CMU Franka Exploration,Franka,CMU,Franka exploring toy kitchens
 CMU Franka Exploration,Franka,CMU,Franka exploring toy kitchens
 UCSD Kitchen,xArm,UCSD,xArm interacting with different toy kitchens
-UCSD Pick Place,xArm,UCSD,xArm picking and placing objects with distractors
-Austin Sailor,Franka,UT Austin,Franka tablesetting tasks
-Austin Sirius,Franka,UT Austin,Franka tabletop manipulation tasks
