@@ -59,6 +59,10 @@
 
     // Create a texture loader so we can load our image file
     var loader = new THREE.TextureLoader();
+    var raycaster, mouse;
+    raycaster = new THREE.Raycaster();
+    mouse = new THREE.Vector2()
+
 
     var num_image = 100
     // create the mesh 1000 times and randomly position around the globe 
@@ -103,6 +107,8 @@
     // scene.add(mesh);
 
     // Kick-off renderer
+    renderer.domElement.addEventListener('click', onClick, false);
+
     (function animate() { // IIFE
       // Frame cycle
 
@@ -115,5 +121,21 @@
 
       requestAnimationFrame(animate);
     })();
+
+    function onClick() {
+
+        event.preventDefault();
+
+        mouse.x = (event.clientX / window.innerWidth) * 2 - 1;
+        mouse.y = -(event.clientY / window.innerHeight) * 2 + 1;
+
+        raycaster.setFromCamera(mouse, camera);
+        var intersects = raycaster.intersectObject(scene, true);
+        if (intersects.length > 0) {
+          var object = intersects[0].object;
+          object.material.color.set( Math.random() * 0xffffff );
+        }
+
+        }
   </script>
 </body>
