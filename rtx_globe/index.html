@@ -7,7 +7,23 @@
 </head>
 
 <body>
+  <style>
+      .content {
+      /* Center your content vertically and horizontally */
+      position: absolute;
+      top: 0;
+      /* right: 25; */
+      /* transform: translate(-50%, -50%); */
+      z-index: 2;
+      color: #fff; /* Set the color for your content */
+      background-color: rgba(0, 0, 0, 0.4);
+    }
+
+  </style>
   <div id="globeViz"></div>
+  <div class="content" style="padding: 0 20px">
+      <p id="banner-text">Click the images around the globe</p>
+    </div>
 
   <script type="importmap">{ "imports": { "three": "https://unpkg.com/three/build/three.module.js" }}</script>
   <script type="module">
@@ -55,26 +71,28 @@
     tbControls.zoomSpeed = 0.8;
     tbControls.maxDistance = 1000.0;
     tbControls.minDistance = 500.0;
-    console.log(camera);
 
     // Create a texture loader so we can load our image file
     var loader = new THREE.TextureLoader();
     var raycaster, mouse;
     raycaster = new THREE.Raycaster();
     mouse = new THREE.Vector2()
+    var mesh_mapping = {};
+    var dictionary = {};
 
 
-    var num_image = 98
+    var num_image = 100;
     // create the mesh 1000 times and randomly position around the globe 
     for (var i = 0; i < 1000; i++) {
+      var img_id = (Math.floor(Math.random() * num_image)) ;
       var material = new THREE.MeshLambertMaterial({
-        //randomly choose between 1.png to 15.png
         // map: loader.load('https://s3.amazonaws.com/duhaime/blog/tsne-webgl/assets/cat.jpg'),
         side: THREE.DoubleSide,
-        map: loader.load('images/' + (Math.floor(Math.random() * num_image) + 1) + '.jpg'),
+        map: loader.load('./images/' + img_id + '.jpg'),
       });
       var geometry = new THREE.PlaneGeometry(10, 10*.75);
       var mesh = new THREE.Mesh(geometry, material);
+      mesh_mapping[mesh.uuid] = img_id;
 
       var theta = 0.2 * Math.random();
       var theta = Math.max(-0.3, Math.min(theta, 0.3));
@@ -98,6 +116,31 @@
 
       scene.add(mesh);
     }
+
+    try {
+        const response = await fetch('./metadata.csv');
+        if (!response.ok) {
+            throw new Error('Network response was not ok');
+        }
+
+        const content = await response.text();
+        const lines = content.split("\n");
+
+        for (let i = 0; i < lines.length; i++) {
+            const line = lines[i].trim();
+
+            // Assuming that entries in a CSV line are comma-separated
+            const entries = line.split(",").map(entry => entry.trim());
+
+            // Using the line number as the key (starting from 1)
+            dictionary[i + 1] = entries;
+        }
+
+        console.log(dictionary);
+    } catch (error) {
+        console.error('There was a problem with fetching the CSV:', error);
+    }
+
     // var mesh = new THREE.Mesh(geometry, material);
 
     // set the position of the image mesh in the x,y,z dimensions
@@ -133,8 +176,14 @@
         var intersects = raycaster.intersectObject(scene, true);
         if (intersects.length > 0) {
           var object = intersects[0].object;
-          object.material.color.set( Math.random() * 0xffffff );
+          object.material.color.set( 0xaaffff );
+          console.log(object);
         }
+        console.log(mesh_mapping);
+        var item_id = mesh_mapping[object.uuid];
+        var robot_data = dictionary[item_id];
+        const bannerText = document.getElementById('banner-text');
+        bannerText.innerHTML = ' <img src="./images/' + item_id + '.jpg" width="320" height="240"/> <p><b>' + robot_data[0] + '</b></p> <p>Robot:' + robot_data[1] + '</p><p>' + robot_data[2]+ '</p><p>' + robot_data[3] + '</p>';
 
         }
   </script>
