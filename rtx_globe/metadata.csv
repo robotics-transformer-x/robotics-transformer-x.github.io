@@ -1,99 +1,100 @@
-Berkeley Bridge,WidowX,Berkeley,WidowX interacting with toy kitchens
-Freiburg Franka Play,Franka,University of Freiburg,Franka arm interacting with kitchen
-Freiburg Franka Play,Franka,University of Freiburg,Franka arm interacting with kitchen
-USC Jaco Play,Jaco 2,USC,Jaco 2 pick place on table top
-USC Jaco Play,Jaco 2,USC,Jaco 2 pick place on table top
-Berkeley Cable Routing,Franka,Berkeley,Routing cable into clamps on table top
-Berkeley Cable Routing,Franka,Berkeley,Routing cable into clamps on table top
-Berkeley Cable Routing,Franka,Berkeley,Routing cable into clamps on table top
-Berkeley Cable Routing,Franka,Berkeley,Routing cable into clamps on table top
-Roboturk,Sawyer,Stanford,"Cloth folding, bowl stacking"
-Austin VIOLA,Franka,UT Austin,Franka robot interacting with stylized kitchen tasks
-Austin VIOLA,Franka,UT Austin,Franka robot interacting with stylized kitchen tasks
-Berkeley Autolab UR5,UR5,Berkeley,"UR5 performing cloth manipulation, pick place etc tasks"
-Furniture Bench,Franka,KAIST,Franka assembling furniture
-Furniture Bench,Franka,KAIST,Franka assembling furniture
-CMU Franka Exploration,Franka,CMU,Franka exploring toy kitchens
-CMU Franka Exploration,Franka,CMU,Franka exploring toy kitchens
-UCSD Kitchen,xArm,UCSD,xArm interacting with different toy kitchens
-UCSD Pick Place,xArm,UCSD,xArm picking and placing objects with distractors
-Austin Sailor,Franka,UT Austin,Franka tablesetting tasks
-Austin Sailor,Franka,UT Austin,Franka tablesetting tasks
-Austin Sirius,Franka,UT Austin,Franka tabletop manipulation tasks
-Austin Sirius,Franka,UT Austin,Franka tabletop manipulation tasks
-BC-Z,Google Robot,Google,Teleoped Google robot doing mostly pick-place from a table
-USC Cloth Sim,Franka,USC,Franka cloth interaction tasks
-Tokyo PR2 Fridge Opening,PR2,UTokyo,PR2 opening fridge doors
-Tokyo PR2 Tabletop Manipulation,PR2,UTokyo,"PR2 tabletop manipulation (folding cloth, picking)"
-Austin Sirius,Franka,UT Austin,Franka tabletop manipulation tasks
-Austin Sailor,Franka,UT Austin,Franka tablesetting tasks
-UTokyo xArm PickPlace,xArm,UTokyo,xArm picking and placing objects
-UTokyo xArm PickPlace,xArm,UTokyo,xArm picking and placing objects
-UTokyo xArm PickPlace,xArm,UTokyo,xArm picking and placing objects
-UTokyo xArm Bimanual,xArm Bimanual,UTokyo,xArm bimanual setup folding towel
-Robonet,Multi-Robot,CMU,Diverse robots performing pseudo-random bin interactions
-Robonet,Multi-Robot,CMU,Diverse robots performing pseudo-random bin interactions
-Robonet,Multi-Robot,CMU,Diverse robots performing pseudo-random bin interactions
-Berkeley MVP Data,xArm,Berkeley,xArm performing 6 manipulation tasks
-Berkeley RPT Data,Franka,Berkeley,Franka performing tabletop pick place tasks
-KAIST Nonprehensile Objects,Franka,KAIST,Franka manipulating ungraspable objects
-Stanford MaskVIT Data,Sawyer,Stanford,Sawyer pushing and picking objects in a bin
-LSMO Dataset,Cobotta,TokyoU,motion planning trajectory of pick place tasks
-DLR Sara Pour Dataset,DLR SARA,DLR,pouring liquid from a bottle into a mug
-DLR Sara Grid Clamp Dataset,DLR SARA,DLR,place grid clamp onto grids on table
-DLR Wheelchair Shared Control,DLR EDAN,DLR,wheelchair with arm performing shelf pick tasks
-ASU TableTop Manipulation,UR5,ASU,UR5 performing table-top pick/place/rotate tasks
-Stanford Robocook,Franka,Stanford,Franka preparing dumplings with various tools
-Stanford Robocook,Franka,Stanford,Franka preparing dumplings with various tools
-Stanford Robocook,Franka,Stanford,Franka preparing dumplings with various tools
-Stanford Robocook,Franka,Stanford,Franka preparing dumplings with various tools
-UCSD Pick Place,xArm,UCSD,xArm picking and placing objects with distractors
-Imperial Wrist Cam,Sawyer,Imperial College,Sawyer performing table top manipulation
-Imperial Wrist Cam,Sawyer,Imperial College,Sawyer performing table top manipulation
-CMU Franka Pick-Insert Data,Franka,CMU,Franka picking objects and insertion tasks
-CMU Franka Pick-Insert Data,Franka,CMU,Franka picking objects and insertion tasks
-UIUC D3Field,Kinova Gen3,UIUC,"Organizing office desk, utensils etc"
-UIUC D3Field,Kinova Gen3,UIUC,"Organizing office desk, utensils etc"
-UIUC D3Field,Kinova Gen3,UIUC,"Organizing office desk, utensils etc"
-UIUC D3Field,Kinova Gen3,UIUC,"Organizing office desk, utensils etc"
-Austin Mutex,Franka,UT Austin,Diverse household manipulation tasks
-Austin Mutex,Franka,UT Austin,Diverse household manipulation tasks
-Berkeley Fanuc Manipulation,Fanuc Mate,Berkeley,Fanuc robot performing various manipulation tasks
-Berkeley Fanuc Manipulation,Fanuc Mate,Berkeley,Fanuc robot performing various manipulation tasks
-CMU Food Manipulation,Franka,CMU,Franka interacting with & cutting different food items
-CMU Food Manipulation,Franka,CMU,Franka interacting with & cutting different food items
-CMU Food Manipulation,Franka,CMU,Franka interacting with & cutting different food items
-RT-1 Robot Action,Google Robot,Google,Table-top manipulation with 17 objects
-QT-Opt (success),Kuka iiwa,Google,Bin picking and rearrangement tasks
-Berkeley Bridge,WidowX,Berkeley,WidowX interacting with toy kitchens
-Freiburg Franka Play,Franka,University of Freiburg,Franka arm interacting with kitchen
-Freiburg Franka Play,Franka,University of Freiburg,Franka arm interacting with kitchen
-USC Jaco Play,Jaco 2,USC,Jaco 2 pick place on table top
-USC Jaco Play,Jaco 2,USC,Jaco 2 pick place on table top
-Berkeley Cable Routing,Franka,Berkeley,Routing cable into clamps on table top
-Berkeley Cable Routing,Franka,Berkeley,Routing cable into clamps on table top
-Berkeley Cable Routing,Franka,Berkeley,Routing cable into clamps on table top
-Berkeley Cable Routing,Franka,Berkeley,Routing cable into clamps on table top
-Roboturk,Sawyer,Stanford,"Cloth folding, bowl stacking"
-Austin VIOLA,Franka,UT Austin,Franka robot interacting with stylized kitchen tasks
-Austin VIOLA,Franka,UT Austin,Franka robot interacting with stylized kitchen tasks
-Berkeley Autolab UR5,UR5,Berkeley,"UR5 performing cloth manipulation, pick place etc tasks"
-Berkeley Autolab UR5,UR5,Berkeley,"UR5 performing cloth manipulation, pick place etc tasks"
-TOTO Benchmark,Franka,CMU,Franka scooping and pouring tasks
-Columbia PushT Dataset,UR5,Columbia,UR5 planar pushing tasks
-Columbia PushT Dataset,UR5,Columbia,UR5 planar pushing tasks
-Stanford Kuka Multimodal,Kuka iiwa,Stanford,Kuka iiwa peg insertion with force feedback
-NYU ROT,xArm,NYU,xArm short-horizon table-top tasks
-Stanford HYDRA,Franka,Stanford,Franka solving long-horizon tasks
-Stanford HYDRA,Franka,Stanford,Franka solving long-horizon tasks
-Austin BUDS,Franka,UT Austin,Franka stylized kitchen tasks
-Austin BUDS,Franka,UT Austin,Franka stylized kitchen tasks
-NYU Franka Play,Franka,NYU,Franka interacting with toy kitchens
-NYU Franka Play,Franka,NYU,Franka interacting with toy kitchens
-Maniskill,Franka,UCSD,Simulated Franka performing various manipulation tasks
-Maniskill,Franka,UCSD,Simulated Franka performing various manipulation tasks
-Furniture Bench,Franka,KAIST,Franka assembling furniture
-Furniture Bench,Franka,KAIST,Franka assembling furniture
-CMU Franka Exploration,Franka,CMU,Franka exploring toy kitchens
-CMU Franka Exploration,Franka,CMU,Franka exploring toy kitchens
-UCSD Kitchen,xArm,UCSD,xArm interacting with different toy kitchens
+0,QT-Opt (success),Kuka iiwa,Google,Bin picking and rearrangement tasks
+1,Berkeley Bridge,WidowX,Berkeley,WidowX interacting with toy kitchens
+2,Freiburg Franka Play,Franka,University of Freiburg,Franka arm interacting with kitchen
+3,Freiburg Franka Play,Franka,University of Freiburg,Franka arm interacting with kitchen
+4,USC Jaco Play,Jaco 2,USC,Jaco 2 pick place on table top
+5,USC Jaco Play,Jaco 2,USC,Jaco 2 pick place on table top
+6,Berkeley Cable Routing,Franka,Berkeley,Routing cable into clamps on table top
+7,Berkeley Cable Routing,Franka,Berkeley,Routing cable into clamps on table top
+8,Berkeley Cable Routing,Franka,Berkeley,Routing cable into clamps on table top
+9,Berkeley Cable Routing,Franka,Berkeley,Routing cable into clamps on table top
+10,Roboturk,Sawyer,Stanford,"Cloth folding, bowl stacking"
+11,Austin VIOLA,Franka,UT Austin,Franka robot interacting with stylized kitchen tasks
+12,Austin VIOLA,Franka,UT Austin,Franka robot interacting with stylized kitchen tasks
+13,Berkeley Autolab UR5,UR5,Berkeley,"UR5 performing cloth manipulation, pick place etc tasks"
+14,Berkeley Autolab UR5,UR5,Berkeley,"UR5 performing cloth manipulation, pick place etc tasks"
+15,TOTO Benchmark,Franka,CMU,Franka scooping and pouring tasks
+16,Columbia PushT Dataset,UR5,Columbia,UR5 planar pushing tasks
+17,Columbia PushT Dataset,UR5,Columbia,UR5 planar pushing tasks
+18,Stanford Kuka Multimodal,Kuka iiwa,Stanford,Kuka iiwa peg insertion with force feedback
+19,NYU ROT,xArm,NYU,xArm short-horizon table-top tasks
+20,Stanford HYDRA,Franka,Stanford,Franka solving long-horizon tasks
+21,Stanford HYDRA,Franka,Stanford,Franka solving long-horizon tasks
+22,Austin BUDS,Franka,UT Austin,Franka stylized kitchen tasks
+23,Austin BUDS,Franka,UT Austin,Franka stylized kitchen tasks
+24,NYU Franka Play,Franka,NYU,Franka interacting with toy kitchens
+25,NYU Franka Play,Franka,NYU,Franka interacting with toy kitchens
+26,Maniskill,Franka,UCSD,Simulated Franka performing various manipulation tasks
+27,Maniskill,Franka,UCSD,Simulated Franka performing various manipulation tasks
+28,Furniture Bench,Franka,KAIST,Franka assembling furniture
+29,Furniture Bench,Franka,KAIST,Franka assembling furniture
+30,CMU Franka Exploration,Franka,CMU,Franka exploring toy kitchens
+31,CMU Franka Exploration,Franka,CMU,Franka exploring toy kitchens
+32,UCSD Kitchen,xArm,UCSD,xArm interacting with different toy kitchens
+33,UCSD Pick Place,xArm,UCSD,xArm picking and placing objects with distractors
+34,Austin Sailor,Franka,UT Austin,Franka tablesetting tasks
+35,Austin Sailor,Franka,UT Austin,Franka tablesetting tasks
+36,Austin Sirius,Franka,UT Austin,Franka tabletop manipulation tasks
+37,Austin Sirius,Franka,UT Austin,Franka tabletop manipulation tasks
+38,BC-Z,Google Robot,Google,Teleoped Google robot doing mostly pick-place from a table
+39,USC Cloth Sim,Franka,USC,Franka cloth interaction tasks
+40,Tokyo PR2 Fridge Opening,PR2,UTokyo,PR2 opening fridge doors
+41,Tokyo PR2 Tabletop Manipulation,PR2,UTokyo,"PR2 tabletop manipulation (folding cloth, picking)"
+42,UTokyo xArm PickPlace,xArm,UTokyo,xArm picking and placing objects
+43,UTokyo xArm PickPlace,xArm,UTokyo,xArm picking and placing objects
+44,UTokyo xArm PickPlace,xArm,UTokyo,xArm picking and placing objects
+45,UTokyo xArm Bimanual,xArm Bimanual,UTokyo,xArm bimanual setup folding towel
+46,Robonet,Multi-Robot,CMU,Diverse robots performing pseudo-random bin interactions
+47,Robonet,Multi-Robot,CMU,Diverse robots performing pseudo-random bin interactions
+48,Robonet,Multi-Robot,CMU,Diverse robots performing pseudo-random bin interactions
+49,Berkeley MVP Data,xArm,Berkeley,xArm performing 6 manipulation tasks
+50,Berkeley RPT Data,Franka,Berkeley,Franka performing tabletop pick place tasks
+51,KAIST Nonprehensile Objects,Franka,KAIST,Franka manipulating ungraspable objects
+52,Stanford MaskVIT Data,Sawyer,Stanford,Sawyer pushing and picking objects in a bin
+53,LSMO Dataset,Cobotta,TokyoU,motion planning trajectory of pick place tasks
+54,DLR Sara Pour Dataset,DLR SARA,DLR,pouring liquid from a bottle into a mug
+55,DLR Sara Grid Clamp Dataset,DLR SARA,DLR,place grid clamp onto grids on table
+56,DLR Wheelchair Shared Control,DLR EDAN,DLR,wheelchair with arm performing shelf pick tasks
+57,ASU TableTop Manipulation,UR5,ASU,UR5 performing table-top pick/place/rotate tasks
+58,Stanford Robocook,Franka,Stanford,Franka preparing dumplings with various tools
+59,Stanford Robocook,Franka,Stanford,Franka preparing dumplings with various tools
+60,Stanford Robocook,Franka,Stanford,Franka preparing dumplings with various tools
+61,Stanford Robocook,Franka,Stanford,Franka preparing dumplings with various tools
+62,Imperial Wrist Cam,Sawyer,Imperial College,Sawyer performing table top manipulation
+63,Imperial Wrist Cam,Sawyer,Imperial College,Sawyer performing table top manipulation
+64,CMU Franka Pick-Insert Data,Franka,CMU,Franka picking objects and insertion tasks
+65,CMU Franka Pick-Insert Data,Franka,CMU,Franka picking objects and insertion tasks
+66,UIUC D3Field,Kinova Gen3,UIUC,"Organizing office desk, utensils etc"
+67,UIUC D3Field,Kinova Gen3,UIUC,"Organizing office desk, utensils etc"
+68,UIUC D3Field,Kinova Gen3,UIUC,"Organizing office desk, utensils etc"
+69,UIUC D3Field,Kinova Gen3,UIUC,"Organizing office desk, utensils etc"
+70,Austin Mutex,Franka,UT Austin,Diverse household manipulation tasks
+71,Austin Mutex,Franka,UT Austin,Diverse household manipulation tasks
+72,Berkeley Fanuc Manipulation,Fanuc Mate,Berkeley,Fanuc robot performing various manipulation tasks
+73,Berkeley Fanuc Manipulation,Fanuc Mate,Berkeley,Fanuc robot performing various manipulation tasks
+74,CMU Food Manipulation,Franka,CMU,Franka interacting with & cutting different food items
+75,CMU Food Manipulation,Franka,CMU,Franka interacting with & cutting different food items
+76,CMU Food Manipulation,Franka,CMU,Franka interacting with & cutting different food items
+77,RT-1 Robot Action,Google Robot,Google,Table-top manipulation with 17 objects
+78,QT-Opt (success),Kuka iiwa,Google,Bin picking and rearrangement tasks
+79,Berkeley Bridge,WidowX,Berkeley,WidowX interacting with toy kitchens
+80,Freiburg Franka Play,Franka,University of Freiburg,Franka arm interacting with kitchen
+81,Freiburg Franka Play,Franka,University of Freiburg,Franka arm interacting with kitchen
+82,USC Jaco Play,Jaco 2,USC,Jaco 2 pick place on table top
+83,USC Jaco Play,Jaco 2,USC,Jaco 2 pick place on table top
+84,Berkeley Cable Routing,Franka,Berkeley,Routing cable into clamps on table top
+85,Berkeley Cable Routing,Franka,Berkeley,Routing cable into clamps on table top
+86,Berkeley Cable Routing,Franka,Berkeley,Routing cable into clamps on table top
+87,Berkeley Cable Routing,Franka,Berkeley,Routing cable into clamps on table top
+88,Roboturk,Sawyer,Stanford,"Cloth folding, bowl stacking"
+89,Austin VIOLA,Franka,UT Austin,Franka robot interacting with stylized kitchen tasks
+90,Austin VIOLA,Franka,UT Austin,Franka robot interacting with stylized kitchen tasks
+91,Berkeley Autolab UR5,UR5,Berkeley,"UR5 performing cloth manipulation, pick place etc tasks"
+92,Berkeley Autolab UR5,UR5,Berkeley,"UR5 performing cloth manipulation, pick place etc tasks"
+93,TOTO Benchmark,Franka,CMU,Franka scooping and pouring tasks
+94,Columbia PushT Dataset,UR5,Columbia,UR5 planar pushing tasks
+95,Columbia PushT Dataset,UR5,Columbia,UR5 planar pushing tasks
+96,Stanford Kuka Multimodal,Kuka iiwa,Stanford,Kuka iiwa peg insertion with force feedback
+97,NYU ROT,xArm,NYU,xArm short-horizon table-top tasks
+98,Stanford HYDRA,Franka,Stanford,Franka solving long-horizon tasks
+99,Stanford HYDRA,Franka,Stanford,Franka solving long-horizon tasks
