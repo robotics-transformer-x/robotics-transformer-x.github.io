@@ -31,8 +31,30 @@
 
   <script type="importmap">{ "imports": { "three": "https://unpkg.com/three/build/three.module.js" }}</script>
   <script type="module">
+
+    
     import { TrackballControls } from 'https://unpkg.com/three/examples/jsm/controls/TrackballControls.js';
     Object.assign(THREE , { TrackballControls });
+
+    const locations = {
+      "Berkeley": {latitude: 37.8716, longitude: -122.2727},
+      "University of Freiburg": {latitude: 47.9935, longitude: 7.8459},
+      "USC": {latitude: 34.0224, longitude: -118.2857},
+      "Stanford": {latitude: 37.4275, longitude: -122.1697},
+      "UT Austin": {latitude: 30.2849, longitude: -97.7341},
+      "UCSD": {latitude: 32.8801, longitude: -117.2340},
+      "KAIST": {latitude: 36.3709, longitude: 127.3643},
+      "CMU": {latitude: 40.4433, longitude: -79.9435},
+      "NYU": {latitude: 40.7295, longitude: -73.9965},
+      "Imperial College London": {latitude: 51.4988, longitude: -0.1755},
+      "UIUC": {latitude: 40.1018, longitude: -88.2272},
+      "UTokyo": {latitude: 35.7126, longitude: 139.7620},
+      "ASU": {latitude: 33.4242, longitude: -111.9281},
+      "DLR": {latitude: 50.8659, longitude: 7.1424},
+      "Google": {latitude: 37.421999, longitude: -122.084057},
+      "Columbia": {latitude: 40.8075, longitude: -73.9626}
+    };
+
 
     const Globe = new ThreeGlobe()
       .globeImageUrl('https://unpkg.com/three-globe/example/img/earth-blue-marble.jpg')
@@ -50,6 +72,9 @@
     const directionalLight = new THREE.DirectionalLight(0xffffff, 0.6 * Math.PI);
     directionalLight.position.set(1, 1, 1); // change light position to see the specularMap's effect
 
+
+
+    Globe.name = 'globe';
     // Setup renderer
     const renderer = new THREE.WebGLRenderer({logarithmicDepthBuffer: true});
     renderer.setSize(window.innerWidth, window.innerHeight);
@@ -84,15 +109,14 @@
     var mesh_mapping = {};
     var dictionary = {};
 
-
     var num_image = 100;
     // create the mesh 1000 times and randomly position around the globe 
     for (var i = 0; i < 1000; i++) {
       var img_id = (Math.floor(Math.random() * num_image)) ;
       var material = new THREE.MeshLambertMaterial({
-        // map: loader.load('https://s3.amazonaws.com/duhaime/blog/tsne-webgl/assets/cat.jpg'),
+        map: loader.load('https://s3.amazonaws.com/duhaime/blog/tsne-webgl/assets/cat.jpg'),
         side: THREE.DoubleSide,
-        map: loader.load('./images/' + img_id + '.jpg'),
+        // map: loader.load('./images/' + img_id + '.jpg'),
       });
       var geometry = new THREE.PlaneGeometry(10, 10*.75);
       var mesh = new THREE.Mesh(geometry, material);
@@ -175,7 +199,7 @@
 
         mouse.x = (event.clientX / window.innerWidth) * 2 - 1;
         mouse.y = -(event.clientY / window.innerHeight) * 2 + 1;
-
+        
         raycaster.setFromCamera(mouse, camera);
         var intersects = raycaster.intersectObject(scene, true);
         if (intersects.length > 0) {
@@ -186,6 +210,35 @@
         var robot_data = dictionary[item_id];
         const bannerText = document.getElementById('banner-text');
         bannerText.innerHTML = ' <img src="./images/' + item_id + '.jpg" width="320" height="240"/> <p><b>' + robot_data[1] + '</b></p> <p>Robot: ' + robot_data[2] + '</p><p>' + robot_data[3]+ '</p><p>' + robot_data[4] + '</p>';
+
+        console.log(robot_data[3]);
+        console.log(locations[robot_data[3]]);
+        var lat = locations[robot_data[3]].latitude;
+        var lon = locations[robot_data[3]].longitude;
+        const N = 1;
+        const gData = [...Array(N).keys()].map(() => ({
+          lat: lat,
+          lng: lon,
+          maxR: 50,
+          propagationSpeed: 10,
+          repeatPeriod: 500
+        }));
+        console.log(gData);
+
+        const colorInterpolator = t => `rgba(255,150,20,${1-t})`;
+
+        
+        Globe.ringsData(gData)
+          .ringColor(() => colorInterpolator)
+          .ringMaxRadius('maxR')
+          .ringPropagationSpeed('propagationSpeed')
+          .ringRepeatPeriod('repeatPeriod')
+          .ringResolution(32);
+
+        // set a timer to do this in 5 seconds
+        setTimeout(function() {
+          Globe.ringsData([]); // clear rings
+        }, 3000);
 
         }
   </script>

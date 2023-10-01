@@ -8,11 +8,11 @@
 7,Berkeley Cable Routing,Franka,Berkeley,Routing cable into clamps on table top
 8,Berkeley Cable Routing,Franka,Berkeley,Routing cable into clamps on table top
 9,Berkeley Cable Routing,Franka,Berkeley,Routing cable into clamps on table top
-10,Roboturk,Sawyer,Stanford,"Cloth folding, bowl stacking"
+10,Roboturk,Sawyer,Stanford,Cloth folding; bowl stacking
 11,Austin VIOLA,Franka,UT Austin,Franka robot interacting with stylized kitchen tasks
 12,Austin VIOLA,Franka,UT Austin,Franka robot interacting with stylized kitchen tasks
-13,Berkeley Autolab UR5,UR5,Berkeley,"UR5 performing cloth manipulation, pick place etc tasks"
-14,Berkeley Autolab UR5,UR5,Berkeley,"UR5 performing cloth manipulation, pick place etc tasks"
+13,Berkeley Autolab UR5,UR5,Berkeley,UR5 performing cloth manipulation; pick place etc tasks
+14,Berkeley Autolab UR5,UR5,Berkeley,UR5 performing cloth manipulation; pick place etc tasks
 15,TOTO Benchmark,Franka,CMU,Franka scooping and pouring tasks
 16,Columbia PushT Dataset,UR5,Columbia,UR5 planar pushing tasks
 17,Columbia PushT Dataset,UR5,Columbia,UR5 planar pushing tasks
@@ -39,7 +39,7 @@
 38,BC-Z,Google Robot,Google,Teleoped Google robot doing mostly pick-place from a table
 39,USC Cloth Sim,Franka,USC,Franka cloth interaction tasks
 40,Tokyo PR2 Fridge Opening,PR2,UTokyo,PR2 opening fridge doors
-41,Tokyo PR2 Tabletop Manipulation,PR2,UTokyo,"PR2 tabletop manipulation (folding cloth, picking)"
+41,Tokyo PR2 Tabletop Manipulation,PR2,UTokyo,PR2 tabletop manipulation (folding cloth; picking)
 42,UTokyo xArm PickPlace,xArm,UTokyo,xArm picking and placing objects
 43,UTokyo xArm PickPlace,xArm,UTokyo,xArm picking and placing objects
 44,UTokyo xArm PickPlace,xArm,UTokyo,xArm picking and placing objects
@@ -60,14 +60,14 @@
 59,Stanford Robocook,Franka,Stanford,Franka preparing dumplings with various tools
 60,Stanford Robocook,Franka,Stanford,Franka preparing dumplings with various tools
 61,Stanford Robocook,Franka,Stanford,Franka preparing dumplings with various tools
-62,Imperial Wrist Cam,Sawyer,Imperial College,Sawyer performing table top manipulation
-63,Imperial Wrist Cam,Sawyer,Imperial College,Sawyer performing table top manipulation
+62,Imperial Wrist Cam,Sawyer,Imperial College of London,Sawyer performing table top manipulation
+63,Imperial Wrist Cam,Sawyer,Imperial College of London,Sawyer performing table top manipulation
 64,CMU Franka Pick-Insert Data,Franka,CMU,Franka picking objects and insertion tasks
 65,CMU Franka Pick-Insert Data,Franka,CMU,Franka picking objects and insertion tasks
-66,UIUC D3Field,Kinova Gen3,UIUC,"Organizing office desk, utensils etc"
-67,UIUC D3Field,Kinova Gen3,UIUC,"Organizing office desk, utensils etc"
-68,UIUC D3Field,Kinova Gen3,UIUC,"Organizing office desk, utensils etc"
-69,UIUC D3Field,Kinova Gen3,UIUC,"Organizing office desk, utensils etc"
+66,UIUC D3Field,Kinova Gen3,UIUC,Organizing office desk; utensils etc
+67,UIUC D3Field,Kinova Gen3,UIUC,Organizing office desk; utensils etc
+68,UIUC D3Field,Kinova Gen3,UIUC,Organizing office desk; utensils etc
+69,UIUC D3Field,Kinova Gen3,UIUC,Organizing office desk; utensils etc
 70,Austin Mutex,Franka,UT Austin,Diverse household manipulation tasks
 71,Austin Mutex,Franka,UT Austin,Diverse household manipulation tasks
 72,Berkeley Fanuc Manipulation,Fanuc Mate,Berkeley,Fanuc robot performing various manipulation tasks
@@ -86,11 +86,11 @@
 85,Berkeley Cable Routing,Franka,Berkeley,Routing cable into clamps on table top
 86,Berkeley Cable Routing,Franka,Berkeley,Routing cable into clamps on table top
 87,Berkeley Cable Routing,Franka,Berkeley,Routing cable into clamps on table top
-88,Roboturk,Sawyer,Stanford,"Cloth folding, bowl stacking"
+88,Roboturk,Sawyer,Stanford,Cloth folding; bowl stacking
 89,Austin VIOLA,Franka,UT Austin,Franka robot interacting with stylized kitchen tasks
 90,Austin VIOLA,Franka,UT Austin,Franka robot interacting with stylized kitchen tasks
-91,Berkeley Autolab UR5,UR5,Berkeley,"UR5 performing cloth manipulation, pick place etc tasks"
-92,Berkeley Autolab UR5,UR5,Berkeley,"UR5 performing cloth manipulation, pick place etc tasks"
+91,Berkeley Autolab UR5,UR5,Berkeley,UR5 performing cloth manipulation; pick place etc tasks
+92,Berkeley Autolab UR5,UR5,Berkeley,UR5 performing cloth manipulation; pick place etc tasks
 93,TOTO Benchmark,Franka,CMU,Franka scooping and pouring tasks
 94,Columbia PushT Dataset,UR5,Columbia,UR5 planar pushing tasks
 95,Columbia PushT Dataset,UR5,Columbia,UR5 planar pushing tasks
