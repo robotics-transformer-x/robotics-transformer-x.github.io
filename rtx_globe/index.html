@@ -114,9 +114,9 @@
     for (var i = 0; i < 1000; i++) {
       var img_id = (Math.floor(Math.random() * num_image)) ;
       var material = new THREE.MeshLambertMaterial({
-        map: loader.load('https://s3.amazonaws.com/duhaime/blog/tsne-webgl/assets/cat.jpg'),
+        // map: loader.load('https://s3.amazonaws.com/duhaime/blog/tsne-webgl/assets/cat.jpg'),
         side: THREE.DoubleSide,
-        // map: loader.load('./images/' + img_id + '.jpg'),
+        map: loader.load('./images/' + img_id + '.jpg'),
       });
       var geometry = new THREE.PlaneGeometry(10, 10*.75);
       var mesh = new THREE.Mesh(geometry, material);
