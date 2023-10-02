@@ -23,6 +23,11 @@
     opacity: 1; /* initially hidden */
     transition: opacity 0.5s; /* duration of the fade effect */
     }
+
+    .non-selectable-image {
+      user-select: none; /* This property prevents the text selection cursor from appearing */
+      pointer-events: none; /* This property disables click, hover, and other interactions */
+    }
   </style>
   <div id="globeViz"></div>
   <div class="content" style="padding: 0 20px">
@@ -210,7 +215,7 @@
         var item_id = mesh_mapping[object.uuid];
         var robot_data = dictionary[item_id];
         const bannerText = document.getElementById('banner-text');
-        bannerText.innerHTML = ' <img src="./images/' + item_id + '.jpg" width="320" height="240"/> <p><b>' + robot_data[1] + '</b></p> <p>Robot: ' + robot_data[2] + '</p><p>' + robot_data[3]+ '</p><p>' + robot_data[4] + '</p>';
+        bannerText.innerHTML = ' <img src="./images/' + item_id + '.jpg" width="320" height="240" class="non-selectable-image"/> <p><b>' + robot_data[1] + '</b></p> <p>Robot: ' + robot_data[2] + '</p><p>' + robot_data[3]+ '</p><p>' + robot_data[4] + '</p>';
 
         var lat = locations[robot_data[3]].latitude;
         var lon = locations[robot_data[3]].longitude;
