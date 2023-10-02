@@ -164,7 +164,6 @@
             dictionary[entries[0]] = entries;
         }
 
-        console.log(dictionary);
     } catch (error) {
         console.error('There was a problem with fetching the CSV:', error);
     }
@@ -193,6 +192,8 @@
       requestAnimationFrame(animate);
     })();
 
+    var gData = [];
+
     function onClick() {
 
         event.preventDefault();
@@ -211,23 +212,19 @@
         const bannerText = document.getElementById('banner-text');
         bannerText.innerHTML = ' <img src="./images/' + item_id + '.jpg" width="320" height="240"/> <p><b>' + robot_data[1] + '</b></p> <p>Robot: ' + robot_data[2] + '</p><p>' + robot_data[3]+ '</p><p>' + robot_data[4] + '</p>';
 
-        console.log(robot_data[3]);
-        console.log(locations[robot_data[3]]);
         var lat = locations[robot_data[3]].latitude;
         var lon = locations[robot_data[3]].longitude;
-        const N = 1;
-        const gData = [...Array(N).keys()].map(() => ({
+        const item = {
           lat: lat,
           lng: lon,
           maxR: 50,
           propagationSpeed: 10,
           repeatPeriod: 500
-        }));
-        console.log(gData);
+        };
+        gData.push(item);
 
         const colorInterpolator = t => `rgba(255,150,20,${1-t})`;
 
-        
         Globe.ringsData(gData)
           .ringColor(() => colorInterpolator)
           .ringMaxRadius('maxR')
@@ -235,10 +232,22 @@
           .ringRepeatPeriod('repeatPeriod')
           .ringResolution(32);
 
+
+        setTimeout(function() {
+          gData.shift();
+          Globe.ringsData(gData)
+          .ringColor(() => colorInterpolator)
+          .ringMaxRadius('maxR')
+          .ringPropagationSpeed('propagationSpeed')
+          .ringRepeatPeriod('repeatPeriod')
+          .ringResolution(32);
+        }, 3000);
+
+
         // set a timer to do this in 5 seconds
         setTimeout(function() {
           Globe.ringsData([]); // clear rings
-        }, 3000);
+        }, 20000);
 
         }
   </script>
