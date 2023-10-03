@@ -466,7 +466,7 @@
             
             <div class="col-md-8 col-md-offset-2">
                 <p style="text-align:center;">
-        	    	<video id="v0" width="100%" playsinline="" autoplay="" muted="" loop="" controls="">
+        	    	<video id="v0" width="100%" playsinline="" autoplay="" muted="" loop="" onclick="setAttribute('controls', 'true');">
                        <source src="video/teaser_compressed.mp4" type="video/mp4">
                    </video>
                 </p>
@@ -587,20 +587,20 @@
             <div class="col-md-10 col-md-offset-1">
                 <div class="video-container" style="margin-top: 0px;">
                     <div class="video-wrapper">
-                        <video class="video" controls autoplay loop muted>
+                        <video class="video" onclick="setAttribute('controls', 'true');" autoplay loop muted>
                             <source src="video/cable_routing_rt1x_out_removed.mp4" type="video/mp4">
                         </video>
                         <p class="caption">At UC Berkeley (RAIL)</p>
                     </div>
                     <div class="video-wrapper">
-                        <video class="video" controls autoplay loop muted>
+                        <video class="video" onclick="setAttribute('controls', 'true');" autoplay loop muted>
                             <source src="video/task_agnostic_open_drawer_rt1x_removed.mp4" type="video/mp4">
                             Your browser does not support the video tag.
                         </video>
                         <p class="caption">At University of Freiburg (AiS)</p>
                     </div>
                     <div class="video-wrapper">
-                        <video class="video" controls autoplay loop muted>
+                        <video class="video" onclick="setAttribute('controls', 'true');" autoplay loop muted>
                             <source src="video/nyuenv1_removed.mp4" type="video/mp4">
                             Your browser does not support the video tag.
                         </video>
@@ -610,20 +610,20 @@
 
                 <div class="video-container" style="margin-top: 0px;">
                     <div class="video-wrapper">
-                        <video class="video" controls autoplay loop muted>
+                        <video class="video" onclick="setAttribute('controls', 'true');" autoplay loop muted>
                             <source src="video/cloth_sweeping_cropped_removed.mp4" type="video/mp4">
                         </video>
                         <p class="caption">At UC Berkeley (AUTOLab)</p>
                     </div>
                     <div class="video-wrapper">
-                        <video class="video" controls autoplay loop muted>
+                        <video class="video" onclick="setAttribute('controls', 'true');" autoplay loop muted>
                             <source src="video/bridge_cropped_removed.mp4" type="video/mp4">
                             Your browser does not support the video tag.
                         </video>
                         <p class="caption">At Stanford (IRIS)</p>
                     </div>
                     <div class="video-wrapper">
-                        <video class="video" controls autoplay loop muted>
+                        <video class="video" onclick="setAttribute('controls', 'true');" autoplay loop muted>
                             <source src="video/jaco_play_removed.mp4" type="video/mp4">
                             Your browser does not support the video tag.
                         </video>
@@ -658,30 +658,32 @@
                 <h4 style="margin-top: 20px;">
                     RT-2-X evaluation on emergent skills
                 </h4>
-
+            </div>
+            <div class="col-md-10 col-md-offset-1">
                 <div class="video-container" style="margin-top: 0px; margin-bottom: 0px;">
                     <div class="video-wrapper">
-                        <video class="video" controls autoplay loop muted>
+                        <video class="video" onclick="setAttribute('controls', 'true');" autoplay loop muted>
                             <source src="video/move_apple_near_cloth_cropped_removed.mp4" type="video/mp4">
                         </video>
                         <p class="caption">move apple near cloth</p>
                     </div>
                     <div class="video-wrapper">
-                        <video class="video" controls autoplay loop muted>
+                        <video class="video" onclick="setAttribute('controls', 'true');" autoplay loop muted>
                             <source src="video/move_apple_on_cloth_cropped_removed.mp4" type="video/mp4">
                             Your browser does not support the video tag.
                         </video>
                         <p class="caption">move apple on cloth</p>
                     </div>
                     <div class="video-wrapper">
-                        <video class="video" controls autoplay loop muted>
+                        <video class="video" onclick="setAttribute('controls', 'true');" autoplay loop muted>
                             <source src="video/move_apple_between_can_and_orange_cropped_removed.mp4" type="video/mp4">
                             Your browser does not support the video tag.
                         </video>
                         <p class="caption">move apple between can & orange</p>
                     </div>
                 </div>
-
+            </div>
+            <div class="col-md-8 col-md-offset-2">
                 <div style="text-align: center; margin-top: 0px; margin-bottom: 24px; font-size: 17px;" class="rt-2-x">
                     <span class="css-rainbow-text">RT-2-X</span>
                         modulates low-level behaviors based on
