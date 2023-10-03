@@ -222,7 +222,7 @@
         var item_id = mesh_mapping[object.uuid];
         var robot_data = dictionary[item_id];
         const bannerText = document.getElementById('banner-text');
-        bannerText.innerHTML = ' <img src="./images/' + item_id + '.jpg" width="320" height="240" class="non-selectable-image"/> <p><b>' + robot_data[1] + '</b></p> <p>Robot: ' + robot_data[2] + '</p><p>' + robot_data[3]+ '</p><p>' + robot_data[4] + '</p>';
+        bannerText.innerHTML = ' <img src="./images/' + item_id + '.jpg" width="320" height="240" class="non-selectable-image"/> <p><b>' + robot_data[1] + '</b></p> <p>Robot: ' + robot_data[2] + '</p><p>Location: ' + robot_data[3]+ '</p><p>Task: ' + robot_data[4] + '</p>';
 
         var lat = locations[robot_data[3]].latitude;
         var lon = locations[robot_data[3]].longitude;
